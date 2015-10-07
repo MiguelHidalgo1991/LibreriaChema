@@ -1,7 +1,7 @@
 package controller;
 
 import java.awt.EventQueue;
-import view.MainWindow;
+import view.Libreria;
 import java.awt.event.ActionListener;
 
 import javax.swing.DefaultComboBoxModel;
@@ -14,7 +14,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class MainWindowController extends MainWindow {
+public class ParcialLibreria extends Libreria {
 	private final Estanteria libreria;
 
 	/**
@@ -24,7 +24,7 @@ public class MainWindowController extends MainWindow {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainWindowController frame = new MainWindowController();
+					ParcialLibreria frame = new ParcialLibreria();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +36,7 @@ public class MainWindowController extends MainWindow {
 	/**
 	 * Create the frame.
 	 */
-	public MainWindowController() {
+	public ParcialLibreria() {
 
 		libreria = new Estanteria();
 		bindEvents();
@@ -66,7 +66,7 @@ public class MainWindowController extends MainWindow {
 						Integer.valueOf(txtNumPaginas.getText()), formato);
 				/* agrego al array */
 				if (libreria.agregarLibro(libro)) {
-					JOptionPane.showMessageDialog(new MainWindowController(), "Libro Agregado");
+					JOptionPane.showMessageDialog(new ParcialLibreria(), "Libro Agregado");
 					iniciarVentana();
 
 					/* Agrego a la lista */
@@ -77,7 +77,7 @@ public class MainWindowController extends MainWindow {
 					/* queda que pida que todos los campos estén rellenos */
 
 				} else {
-					JOptionPane.showMessageDialog(new MainWindowController(), "Ya existe ese libro", "Error",
+					JOptionPane.showMessageDialog(new ParcialLibreria(), "Ya existe ese libro", "Error",
 							JOptionPane.ERROR_MESSAGE);
 				}
 
@@ -105,7 +105,7 @@ public class MainWindowController extends MainWindow {
 		});
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int confirmed = JOptionPane.showConfirmDialog(new MainWindowController(),
+				int confirmed = JOptionPane.showConfirmDialog(new ParcialLibreria(),
 						"Desea realmente salir de la aplicacion?");
 				if (confirmed == JOptionPane.OK_OPTION) {
 					System.exit(0);
@@ -136,7 +136,7 @@ public class MainWindowController extends MainWindow {
 
 				comboTemas.setSelectedIndex(libro.getTema());
 
-				JOptionPane.showMessageDialog(new MainWindowController(), "Mostrando");
+				JOptionPane.showMessageDialog(new ParcialLibreria(), "Mostrando");
 			}
 		});
 	}

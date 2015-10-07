@@ -24,7 +24,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JList;
 
 @SuppressWarnings("serial")
-public class MainWindow extends JFrame {
+public class Libreria extends JFrame {
 
 	protected JPanel contentPane;
 	protected JTextField txtTitulo;
@@ -45,7 +45,7 @@ public class MainWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MainWindow() {
+	public Libreria() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 613, 373);
