@@ -15,7 +15,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class MainWindowController extends MainWindow {
-	private final Libreria libreria;
+	private final Estanteria libreria;
 
 	/**
 	 * Launch the application.
@@ -38,7 +38,7 @@ public class MainWindowController extends MainWindow {
 	 */
 	public MainWindowController() {
 
-		libreria = new Libreria();
+		libreria = new Estanteria();
 		bindEvents();
 	}
 

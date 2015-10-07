@@ -2,13 +2,13 @@ package controller;
 
 import model.Libro;
 
-public class Libreria {
+public class Estanteria {
 	private static int MAX_REG = 3;
 	private int reg = 0;
 	private Libro[] libros;
 
 	/* Constructors */
-	public Libreria() {
+	public Estanteria() {
 		libros = new Libro[MAX_REG];
 	}
 
